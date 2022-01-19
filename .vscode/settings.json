@@ -1,5 +1,14 @@
 {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:my-cli}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    },
 }
