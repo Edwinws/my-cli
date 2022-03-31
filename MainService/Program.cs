@@ -13,7 +13,7 @@ class Program {
         prog.displayMenu();
 
         var option = prog.getOptionInput();
-        prog.getOptionInstance(option).Run();
+        prog.menuService.getOptionInstance(option).Run();
     }
 
     private void displayMenu() {
@@ -25,17 +25,6 @@ class Program {
     }
 
     private int getOptionInput() {
-        return 0;
-    }
-
-    private IConsoleOption getOptionInstance(int option) {
-        string[] classMapping = {
-            "FileReadWrite1",
-        };
-
-        Type? type = Type.GetType(classMapping[option]);
-        var instance = (IConsoleOption?)Activator.CreateInstance(type!);
-
-        return instance!;
+        return 0; // TODO: Get user input
     }
 }
