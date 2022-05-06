@@ -13,7 +13,7 @@ class Program {
         prog.displayMenu();
 
         var option = prog.menuService.getOptionInput();
-        prog.menuService.getOptionInstance(Int16.Parse(option)).Run();
+        prog.menuService.getOptionInstance(option).Run();
     }
 
     private void displayMenu() {
