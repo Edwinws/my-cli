@@ -16,7 +16,6 @@ class Program {
 
             try {
                 int? option = prog.menuService.getOptionInput();
-                Console.WriteLine(option);
                 if (option == null) {
                     continue;
                 }
