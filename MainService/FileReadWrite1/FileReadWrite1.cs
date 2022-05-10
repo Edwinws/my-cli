@@ -19,6 +19,7 @@ class FileReadWrite1 : IConsoleOption {
         this.prepareStorageFolder();
         this.writeFile();
         this.readFile();
+        this.cleanUpFile();
     }
 
     private void prepareStorageFolder() {
@@ -45,5 +46,10 @@ class FileReadWrite1 : IConsoleOption {
 
         Console.WriteLine($"Reading {path}...");
         Console.WriteLine("File Contents: " + File.ReadAllText(path));
+    }
+
+    private void cleanUpFile() {
+        Console.WriteLine("Deleting generated file...");
+        File.Delete(Path.Combine(this.storageFolder, "File.txt"));
     }
 }
